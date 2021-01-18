@@ -21,12 +21,16 @@ public class MainActivity extends AppCompatActivity {
         EditText input1 = findViewById(R.id.Input1);
         EditText input2 = findViewById(R.id.Input2);
         EditText input3 = findViewById(R.id.Input3);
+        Double i1 = 0.00;
+        Double i2 = 0.00;
+        Double i3 = 0.00;
 
-        if (!input1.getText().toString().equals("")&&!input2.getText().toString().equals("")&&!input3.getText().toString().equals("")) {
-
-            Double i1 =Double.valueOf(input1.getText().toString());
-            Double i2 =Double.valueOf(input2.getText().toString());
-            Double i3 =Double.valueOf(input3.getText().toString());
+        if (!input1.getText().toString().equals(""))
+            i1 =Double.valueOf(input1.getText().toString());
+            else if(!input2.getText().toString().equals(""))
+            i2 =Double.valueOf(input2.getText().toString());
+                else if(!input3.getText().toString().equals("")) {
+            i3 =Double.valueOf(input3.getText().toString());
             result = i1+i2+i3;
             output.setText(result.toString());
         }
@@ -40,39 +44,44 @@ public class MainActivity extends AppCompatActivity {
         EditText input1 = findViewById(R.id.Input1);
         EditText input2 = findViewById(R.id.Input2);
         EditText input3 = findViewById(R.id.Input3);
-        if (!input1.getText().toString().equals("")&&!input2.getText().toString().equals("")&&!input3.getText().toString().equals("")) {
-            if (!input1.getText().toString().equals("")&&!input2.getText().toString().equals("")&&!input3.getText().toString().equals("")) {
-                if(input1.getText().toString().equals(""))
-                    input1.getText().toString().equals("0");
-                else if(input2.getText().toString().equals(""))
-                    input2.getText().toString().equals("0");
-                else if(input3.getText().toString().equals(""))
-                    input3.getText().toString().equals("0");
-                Double i1 =Double.valueOf(input1.getText().toString());
-                Double i2 =Double.valueOf(input2.getText().toString());
-                Double i3 =Double.valueOf(input3.getText().toString());
-                result = i1-i2+i3;
-                output.setText(result.toString());
-            }
-            else {
-                output.setText("No Value");
-            }
-        }
+        Double i1 = 0.00;
+        Double i2 = 0.00;
+        Double i3 = 0.00;
 
-        public void calculation3(View view) {
-            TextView output = findViewById(R.id.textView);
-            EditText input1 = findViewById(R.id.Input1);
-            EditText input2 = findViewById(R.id.Input2);
-            EditText input3 = findViewById(R.id.Input3);
-            if (!input1.getText().toString().equals("")&&!input2.getText().toString().equals("")&&!input3.getText().toString().equals("")) {
-                Double i1 =Double.valueOf(input1.getText().toString());
-                Double i2 =Double.valueOf(input2.getText().toString());
-                Double i3 =Double.valueOf(input3.getText().toString());
-                result = i1*i2-i3;
-                output.setText(result.toString());
-            }
-            else {
-                output.setText("No Value");
-            }
+        if (!input1.getText().toString().equals(""))
+            i1 =Double.valueOf(input1.getText().toString());
+        else if(!input2.getText().toString().equals(""))
+            i2 =Double.valueOf(input2.getText().toString());
+        else if(!input3.getText().toString().equals("")) {
+            i3 =Double.valueOf(input3.getText().toString());
+            result = i1-i2+i3;
+            output.setText(result.toString());
+        }
+        else {
+            output.setText("No Value");
         }
     }
+
+    public void calculation3(View view) {
+        TextView output = findViewById(R.id.textView);
+        EditText input1 = findViewById(R.id.Input1);
+        EditText input2 = findViewById(R.id.Input2);
+        EditText input3 = findViewById(R.id.Input3);
+        Double i1 = 0.00;
+        Double i2 = 0.00;
+        Double i3 = 0.00;
+
+        if (!input1.getText().toString().equals(""))
+            i1 =Double.valueOf(input1.getText().toString());
+        else if(!input2.getText().toString().equals(""))
+            i2 =Double.valueOf(input2.getText().toString());
+        else if(!input3.getText().toString().equals("")) {
+            i3 =Double.valueOf(input3.getText().toString());
+            result = i1*i2-i3;
+            output.setText(result.toString());
+        }
+        else {
+            output.setText("No Value");
+        }
+    }
+}
