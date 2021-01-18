@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Wong Shou Hong Quiz 2</string>
+    <string name="Output"></string>
+    <string name="Button1">A+B+C</string>
+    <string name="Button2">A-B+C</string>
+    <string name="Button3">A*B-C</string>
+    <string name="Input1">A</string>
+    <string name="Input2">B</string>
+    <string name="Input3">C</string>
+</resources>
